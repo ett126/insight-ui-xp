@@ -17,18 +17,18 @@ msgstr "(入力は未検証です)"
 
 #: public/views/404.html
 msgid "404 Page not found :("
-msgstr "404 ページがみつかりません (´・ω・`)"
+msgstr "404 ページがみつかりません "
 
 #: public/views/index.html
 msgid ""
 "<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" target="
-"\"_blank\">open-source Bitcoin blockchain explorer</a> with complete REST "
+"\"_blank\">open-source eXperiencePoints blockchain explorer</a> with complete REST "
 "and websocket APIs that can be used for writing web wallets and other apps  "
-"that need more advanced blockchain queries than provided by bitcoind RPC.  "
+"that need more advanced blockchain queries than provided by XPd RPC.  "
 "Check out the <a href=\"https://github.com/bitpay/insight-ui\" target=\"_blank"
 "\">source code</a>."
 msgstr ""
-"<strong>insight</strong>は、bitcoind RPCの提供するものよりも詳細なブロック"
+"<strong>insight</strong>は、XPd RPCの提供するものよりも詳細なブロック"
 "チェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くのに"
 "使える、完全なRESTおよびwebsocket APIを備えた<a href=\"http://live.insight."
 "is/\" target=\"_blank\">オープンソースのビットコインブロックエクスプローラ</"
@@ -75,11 +75,11 @@ msgstr "最良ブロック"
 
 #: public/views/messages_verify.html
 msgid "Bitcoin comes with a way of signing arbitrary messages."
-msgstr "Bitcoinには任意のメッセージを署名する昨日が備わっています。"
+msgstr "XPには任意のメッセージを署名する機能が備わっています。"
 
 #: public/views/status.html
 msgid "Bitcoin node information"
-msgstr "Bitcoinノード情報"
+msgstr "XPノード情報"
 
 #: public/views/block.html
 msgid "Block"
@@ -104,10 +104,10 @@ msgstr "シリアライズ後の容量 (バイト)"
 
 #: public/views/includes/connection.html
 msgid ""
-"Can't connect to bitcoind to get live updates from the p2p network. (Tried "
-"connecting to bitcoind at {{host}}:{{port}} and failed.)"
+"Can't connect to XPd to get live updates from the p2p network. (Tried "
+"connecting to XPd at {{host}}:{{port}} and failed.)"
 msgstr ""
-"P2Pネットワークからライブ情報を取得するためにbitcoindへ接続することができませ"
+"P2Pネットワークからライブ情報を取得するためにXPdへ接続することができませ"
 "んでした。({{host}}:{{port}} への接続を試みましたが、失敗しました。)"
 
 #: public/views/includes/connection.html
@@ -213,8 +213,8 @@ msgid "Last Block"
 msgstr "直前のブロック"
 
 #: public/views/status.html
-msgid "Last Block Hash (Bitcoind)"
-msgstr "直前のブロックのハッシュ値 (Bitcoind)"
+msgid "Last Block Hash (XPd)"
+msgstr "直前のブロックのハッシュ値 (XPd)"
 
 #: public/views/index.html
 msgid "Latest Blocks"
@@ -426,17 +426,17 @@ msgstr "このアドレスに対するトランザクションはありません
 #: public/views/transaction_sendraw.html
 msgid ""
 "This form can be used to broadcast a raw transaction in hex format over\n"
-"        the Bitcoin network."
+"        the XP network."
 msgstr ""
-"このフォームでは、16進数フォーマットの生のトランザクションをBitcoinネットワー"
+"このフォームでは、16進数フォーマットの生のトランザクションをXPネットワー"
 "ク上に配信することができます。"
 
 #: public/views/messages_verify.html
 msgid ""
 "This form can be used to verify that a message comes from\n"
-"        a specific Bitcoin address."
+"        a specific XP address."
 msgstr ""
-"このフォームでは、メッセージが特定のBitcoinアドレスから来たかどうかを検証する"
+"このフォームでは、メッセージが特定のXPアドレスから来たかどうかを検証する"
 "ことができます。"
 
 #: public/views/status.html
@@ -453,7 +453,7 @@ msgstr "今日"
 
 #: public/views/status.html
 msgid "Total Amount"
-msgstr "Bitcoin総量"
+msgstr "XP総量"
 
 #: public/views/address.html
 msgid "Total Received"
@@ -483,7 +483,7 @@ msgstr "トランザクションの配信に成功しました。<br>トラン�
 #: public/views/block_list.html public/views/index.html
 #: public/views/status.html
 msgid "Transactions"
-msgstr "トランザクション"
+msgstr "トランザクション数"
 
 #: public/views/transaction/tx.html
 msgid "Type"
@@ -527,7 +527,7 @@ msgstr "トランザクションを待っています..."
 
 #: public/views/block_list.html
 msgid "by date."
-msgstr "日毎。"
+msgstr "日毎"
 
 #: public/views/transaction/tx.html
 msgid "first seen at"
