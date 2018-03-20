@@ -106,7 +106,8 @@
           </tr>
           <tr>
             <td translate>Network</td>
-            <td class="text-right">{{info.network}}</td>
+            <td class="text-right" data-ng-show="!info.testnet">livenet</td>
+            <td class="text-right" data-ng-show="info.testnet">testnet</td>
           </tr>
           <tr>
             <td translate>Proxy setting</td>
