@@ -38,6 +38,35 @@ angular.module('insight.currency').controller('CurrencyController',
 
       return 'value error';
     };
+    $rootScope.currency.getConvertionFee = function(value) {
+      value = value * 1; // Convert to number
+      value = Math.abs(value);
+
+      if (!isNaN(value) && typeof value !== 'undefined' && value !== null) {
+        if (value === 0.00000000) return '0 ' + this.symbol; // fix value to show
+
+        var response;
+
+        if (this.symbol === 'USD') {
+          response = _roundFloat((value * this.factor), 2);
+        } else if (this.symbol === 'mXP') {
+          this.factor = 1000;
+          response = _roundFloat((value * this.factor), 5);
+        } else if (this.symbol === 'bits') {
+          this.factor = 1000000;
+          response = _roundFloat((value * this.factor), 2);
+        } else { // assumes symbol is XP
+          this.factor = 1;
+          response = _roundFloat((value * this.factor), 8);
+        }
+        // prevent sci notation
+        if (response < 1e-7) response=response.toFixed(8);
+
+        return response + ' ' + this.symbol;
+      }
+
+      return 'value error';
+    };
 
     $scope.setCurrency = function(currency) {
       $rootScope.currency.symbol = currency;

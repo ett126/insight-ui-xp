@@ -166,6 +166,10 @@ msgstr "エラー！"
 msgid "Fee"
 msgstr "手数料"
 
+#: public/views/transaction/tx.html
+msgid "Stake"
+msgstr "ステーク"
+
 #: public/views/address.html
 msgid "Final Balance"
 msgstr "最終残高"
