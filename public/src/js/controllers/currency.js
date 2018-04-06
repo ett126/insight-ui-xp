@@ -10,6 +10,16 @@ angular.module('insight.currency').controller('CurrencyController',
       return Math.round(x * Math.pow(10, n)) / Math.pow(10, n);
     };
 
+    var _commaDelimit = function(str) {
+        var delimiter = '.';
+        var splitedNum = String(str).toString().split(delimiter); 
+        if(splitedNum[1] !== undefined){
+          return splitedNum[0].replace(/(\d)(?=(\d{3})+$)/g , '$1,') + delimiter + splitedNum[1];
+        }else{
+          return splitedNum[0].replace(/(\d)(?=(\d{3})+$)/g , '$1,');
+        }
+    };
+
     $rootScope.currency.getConvertion = function(value) {
       value = value * 1; // Convert to number
 
@@ -33,7 +43,7 @@ angular.module('insight.currency').controller('CurrencyController',
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
-        return response + ' ' + this.symbol;
+        return _commaDelimit(response) + ' ' + this.symbol;
       }
 
       return 'value error';
@@ -62,7 +72,7 @@ angular.module('insight.currency').controller('CurrencyController',
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
-        return response + ' ' + this.symbol;
+        return _commaDelimit(response) + ' ' + this.symbol;
       }
 
       return 'value error';
